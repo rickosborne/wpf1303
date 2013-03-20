@@ -41,6 +41,7 @@ var isPrime = function(someNumber) {
 //    (which can be as simple or complex as you need it to be)
 // 4. Functions MAY return a value that takes the place of where the function was called
 //    a. We call functions with parentheses: ()
+//    b. When we return, the function stops there
 // 5. Functions provide ENCAPSULATION, which means:
 //    the code outside doesn't care about the code inside
 //    (we can change the inside without worrying if the outside will break)
