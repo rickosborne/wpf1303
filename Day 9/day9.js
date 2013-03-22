@@ -36,9 +36,26 @@ var sortGenerator = function (keyName) {
 var groceries = [
     { "name": "eggs",   "price": 2.50, "aisle": 3  },
     { "name": "milk",   "price": 4.00, "aisle": 1  },
-    { "name": "butter", "price": 0.99, "aisle": 12  }
+    { "name": "butter", "price": 0.99, "aisle": 12  },
+    { "name": "gumball", "price": 0.25, "aisle": 99  },
+    { "name": "cookie", "price": 0.75, "aisle": 99  },
+    { "name": "fireball", "price": 0.25, "aisle": 99  },
+    { "name": "ringpop", "price": 0.25, "aisle": 99  }
 ];
 console.log(groceries);
 //console.log("sorted groceries by aisle: ", groceries.sort(sortGenerator("aisle")));
-console.log("sorted groceries by name: ", groceries.sort(sortGenerator("name")));
-console.log("sorted groceries by price: ", groceries.sort(sortGenerator("price")));
+//console.log("sorted groceries by name: ", groceries.sort(sortGenerator("name")));
+//console.log("sorted groceries by price: ", groceries.sort(sortGenerator("price")));
+
+var cheapGroceries = function (groceries) {
+    // return an array that has only the groceries less than $1
+    var cheap = [];
+    // for each item in the groceries ...
+    groceries.forEach(function(item) {
+        if (item["price"] < 1) {
+            cheap.push(item);
+        } // if
+    }); // forEach
+    return cheap;
+};
+console.log("cheap groceries: ", cheapGroceries(groceries));
